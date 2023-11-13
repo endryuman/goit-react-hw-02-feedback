@@ -1,22 +1,11 @@
 import React from 'react';
-
+import styles from './FeedbackOptions.module.css';
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
   return (
-    <div
-      style={{
-        display: 'flex',
-        gap: '10px',
-        justifyContent: 'center',
-      }}
-    >
+    <div className={styles.optionsWrapper}>
       {options.map(option => (
         <button
-          style={{
-            height: '60px',
-            fontSize: 40,
-            color: '#ffffff',
-            backgroundColor: '#7a48e6',
-          }}
+          className={styles.optionsButton}
           key={option}
           type="button"
           onClick={() => onLeaveFeedback(option)}
